@@ -1,0 +1,106 @@
+extends ../includes/html
+
+block variables 
+    - var pageTitle = "Cases"
+    - var youAuthorized = true;  
+
+block content
+
+    mixin cas__slider_main_block(className)
+        div(class = "cas__slider_main_block "+className)
+            img.gun(src='build/img/gun03.svg' alt='')
+            img.item(src='build/img/item01.svg' alt='')
+            p.ttl16 AWP #[br] #[span Snake skin]
+
+    mixin cas__slider_main_cont 
+        .cas__slider_main_cont
+            +cas__slider_main_block("rose")
+            +cas__slider_main_block("red")
+            +cas__slider_main_block("violet")
+            +cas__slider_main_block("yellow")
+            +cas__slider_main_block("darkblue")
+            +cas__slider_main_block("white")
+
+    mixin label_x(name, checked)
+        if (checked)
+            label(for='')
+                input(type='radio' name='cas__slider_mult' id='' checked)
+                div="x"+name
+        else
+            label(for='')
+                input(type='radio' name='cas__slider_mult' id='')
+                div="x"+name
+
+    mixin skin__block(className)
+        div(class="skin__block "+className)
+            img.gun(src='build/img/gun02.svg' alt='')
+            p.ttl16 AWP #[br] #[span Snake skin]
+
+    main.cas
+        .main__container
+            .cas__slider
+                .cas__slider_header
+                    a.cas__slider_header_back(href='#') #[p Back]
+                    p.ttl48 TASTY CASE
+      
+                .cas__slider_01
+                    .cas__slider_main
+                        
+                        +cas__slider_main_cont
+                        +cas__slider_main_cont
+                        +cas__slider_main_cont
+                        +cas__slider_main_cont
+                        +cas__slider_main_cont
+                        +cas__slider_main_cont
+                        +cas__slider_main_cont
+                        +cas__slider_main_cont
+                        +cas__slider_main_cont
+                        +cas__slider_main_cont
+                        img.cas__slider_main_frame01(src='build/img/cases_frame01.png' alt='')
+                        img.cas__slider_main_frame02(src='build/img/cases_frame02.png' alt='')
+        
+                    .cas__slider_settings
+                        label.cas__slider_settings_chkbox
+                            input(type='checkbox' name='')
+                            div
+                            p MUTE
+          
+                        .cas__slider_settings_cont
+                            +label_x("1", true)          
+                            +label_x("2")           
+                            +label_x("3")           
+                            +label_x("4")           
+                            +label_x("5")           
+                            +label_x("6")           
+                            +label_x("7")           
+                            +label_x("8")           
+                            +label_x("9")           
+                            +label_x("10")           
+                        
+                        label.cas__slider_settings_chkbox
+                            input(type='checkbox' name='' checked='')
+                            div
+                            p FAST OPEN
+                    
+                    .cas__slider_bottom
+                        p $ #[span 2.94] 
+                        button Open case
+    
+            .cas__cases
+                p.ttl35 Contents in Case
+                
+                .skins__cont
+                    +skin__block("rose")
+                    +skin__block("violet")
+                    +skin__block("red")
+                    +skin__block("yellow")
+                    +skin__block("darkblue")
+                    +skin__block("lightblue")
+                    +skin__block("white")
+                    +skin__block("rose")
+                    +skin__block("violet")
+                    +skin__block("red")
+                    +skin__block("yellow")
+                    +skin__block("darkblue")
+                    +skin__block("lightblue")
+                    +skin__block("white")

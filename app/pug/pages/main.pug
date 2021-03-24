@@ -1,0 +1,126 @@
+extends ../includes/html
+
+block variables 
+    - var pageTitle = "Main"
+    - var youAuthorized = false; 
+
+block content    
+
+    main.main
+        .main__intro
+            img(src="build/img/bg/main_intro01.png", alt="")
+            p WITCHER WEEK
+
+        .main__first
+            .main__container
+                p.ttl35 Time left: #[span 09:25:12]
+                .main__first_cont.cont
+                    +game__block("#", "dragon_hunter01.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter02.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter03.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter04.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter05.jpg", "0.13", "DRAGON HUNTER")
+
+        .main__second
+            .main__container
+                p.ttl35 Cases CS GO
+                .main__second_cont.cont
+                    +game__block("#", "dragon_hunter06.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter07.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter08.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter09.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter10.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter06.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter11.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter12.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter13.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter14.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter15.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter16.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter17.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter18.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter19.jpg", "0.13", "DRAGON HUNTER")
+           
+        .main__third
+            .main__container 
+                p.ttl35 Heroes Case
+                .main__third_cont.cont
+                    +game__block("#", "dragon_hunter06.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter09.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter17.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter20.jpg", "0.13", "DRAGON HUNTER")
+                    +game__block("#", "dragon_hunter06.jpg", "0.13", "DRAGON HUNTER")
+
+        .main__fourth
+            .main__container
+                p.ttl35 The Great Vault Boost
+                .main__fourth_cont.cont
+                    +pack__block("#", "Cheap case CS:GO")
+                    +pack__block("#", "Free cases")
+                    +pack__block("#", "Heroes")
+                    +pack__block("#", "Shadowlands Hot Offers")
+                    +pack__block("#", "Packages")
+                    +pack__block("#", "Raids")
+                    +pack__block("#", "Shadowlands Hot Offers")
+                    +pack__block("#", "Packages")
+                    +pack__block("#", "Raids")
+
+        .main__rev
+            .main__container
+                p.ttl124 #[span 5000 +] #[br] reviews
+                .main__rev_cont01.cont
+                    +rev__block
+                    +rev__block
+                    +rev__block
+                    +rev__block
+                    +rev__block
+                .main__rev_cont02.cont
+                    +cond__block(
+                        "ok01.svg", 
+                        "5000 + REVIEWS", 
+                        "More than 1000 professional boosters in the team. Our company is officially") 
+                    +cond__block(
+                        "clock01.svg", 
+                        "24/7 ONLINE", 
+                        "More than 1000 professional boosters in the team. Our company is officially") 
+                    +cond__block(
+                        "box01.svg", 
+                        "80K CASES", 
+                        "More than 1000 professional boosters in the team. Our company is officially") 
+                    +cond__block(
+                        "percent01.svg", 
+                        "10% DISCOUNT", 
+                        "More than 1000 professional boosters in the team. Our company is officially") 
+                .main__rev_cont03.cont
+
+                    .main__rev_cont03_textbox
+                        p.ttl25 THE GREAT VAULT
+                        p.txt18  
+                            | Is essentially a re-thinked and improved version of BFA weekly loot chest. Instead of dropping a single random item, the
+                            | Great Vault contains up to 9 items to choose from. Buying a Great Vault boost will allow you to unlock all 9 items and select the item with optimal stats.
+                            <br> <br>
+                            | We provide all 3 types of Great Vault carry: Mythic+ dungeons, Raid, and Rated Arena, each option adds up to 3 items to
+                            | choose from. You can construct your personal Great Vault boost by choosing only the content you want.
+
+                    .main__rev_cont03_textbox
+                        p.ttl25 THE GREAT VAULT
+                        p.txt18  
+                            | Is essentially a re-thinked and improved version of BFA weekly loot chest. Instead of dropping a single random item, the
+                            | Great Vault contains up to 9 items to choose from. Buying a Great Vault boost will allow you to unlock all 9 items and select the item with optimal stats.
+                            <br> <br>
+                            | We provide all 3 types of Great Vault carry: Mythic+ dungeons, Raid, and Rated Arena, each option adds up to 3 items to
+                            | choose from. You can construct your personal Great Vault boost by choosing only the content you want.
+        
+        .main__banner
+            .main__container
+                p.ttl35 Your skins are waiting for you!
+                .main__banner_cont
+                    img.ak(src="build/img/ak01.png", alt="")
+                    img.knife01(src="build/img/knife01.png", alt="")
+                    img.knife02(src="build/img/knife02.png", alt="")
+                    
+                    p.ttl45 Come in through Steam sell #[br] skins and get money
+                    p.txt Daily raffles and a sea of gifts
+                    a.btn(href="#")
+                        p Go
+                        img(src="build/img/icons/arrow03.svg", alt="")

@@ -1,0 +1,69 @@
+extends ../includes/html
+
+block variables 
+    - var pageTitle = "Cases"
+    - var youAuthorized = true; 
+
+block content
+
+    mixin skin__block(className, edit)
+        if className== "empty"
+            div(class= 'skin__block '+className)
+                .edit
+                    .plus
+                    p.ttl16= edit
+
+        else
+            div(class= 'skin__block '+className)
+                .edit
+                    .plus
+                    p.ttl16= edit
+                .skin__price.top__block $ #[span 0.03]
+                img.gun(src='build/img/gun02.svg' alt='')
+                p.ttl16 AWP #[br] #[span Snake skin]
+        
+
+    main.contract
+
+        .contract__create
+    
+            .contract__container
+                p.ttl48 CONTRACT CREATION  
+                
+                .contract__create_cont
+                    +skin__block("rose", "Delete")
+                    +skin__block("lightblue", "Delete")
+                    +skin__block("white", "Delete")
+                    +skin__block("violet", "Delete")
+                    +skin__block("red", "Delete")
+                    +skin__block("red", "Delete")
+                    +skin__block("rose", "Delete")
+                    +skin__block("lightblue", "Delete")
+                    +skin__block("empty", "Add to contract")
+                    +skin__block("red", "Delete")
+      
+                .contract__create_bottom
+                    a.txt16(href='#') How does it work?
+                    button
+                        p.ttl21 Create a contract
+                        p.txt13 Add a minimum of 3 items
+  
+        .contract__items
+            .main__container
+                p.ttl35 Items available for contract:
+                
+                .contract__items_cont
+                    +skin__block("rose", "Add to contract")
+                    +skin__block("violet", "Add to contract")
+                    +skin__block("red", "Add to contract")
+                    +skin__block("yellow", "Add to contract")
+                    +skin__block("darkblue", "Add to contract")
+                    +skin__block("lightblue", "Add to contract")
+                    +skin__block("white", "Add to contract")
+                    +skin__block("rose", "Add to contract")
+                    +skin__block("violet", "Add to contract")
+                    +skin__block("red", "Add to contract")
+                    +skin__block("yellow", "Add to contract")
+                    +skin__block("darkblue", "Add to contract")
+                    +skin__block("lightblue", "Add to contract")
+                    +skin__block("white", "Add to contract")

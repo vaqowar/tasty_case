@@ -1,0 +1,129 @@
+mixin footer__link(link, name, className, withli)
+    if (withli)
+        li 
+            a(class = "footer__link "+className, href= link)= name     
+    else
+        a(class = "footer__link "+className, href= link)= name     
+     
+
+footer.footer
+    .main__container
+        .footer__inner
+            .footer__col
+                .footer__logo_box
+                    p.tastycase__logo tasty-<span>case</span>
+                p.footer__txt 2020 © Все материалы данного сайта <br> являются объектами авторского права. <br> Копирование запрещено.
+            .footer__col
+                .footer__logo_box
+                    img.g2apay(src="build/img/g2a_pay01.svg", alt="")
+                a(href="#")
+                    p.footer__txt Политика конфиденциальности
+            .footer__col 
+                .footer__logo_box 
+                    .giveaway__logo GIVEAWAY
+                p.footer__txt Разработка сайта: Tasty-case
+            ul.footer__col
+                +footer__link("#", "Top of users")
+                +footer__link("#", "Balance bonus", "yellow")
+                +footer__link("#", "Game")
+                +footer__link("#", "Inspect")
+
+            ul.footer__links
+                +footer__link("#", "Link #1", "", true)
+                +footer__link("#", "Link #2", "", true)
+                +footer__link("#", "Link #3", "", true)
+                +footer__link("#", "Link #4", "", true)
+                +footer__link("#", "Link #5", "", true)
+                +footer__link("#", "Link #6", "", true)
+                +footer__link("#", "Link #7", "", true)
+                +footer__link("#", "Link #8", "", true)
+                +footer__link("#", "Link #9", "", true)
+
+
+.balancepopup
+    .balancepopup__bg
+    .balancepopup__window
+        img.balancepopup__window_bg(src="build/img/bg/balancepopup01.png", alt="")
+        .balancepopup__close
+        p.ttl50 RECHARGE BALANCE
+        .line
+        .string
+            p $ 100 - 5% #[br] bonus
+            p $ 300 - 10% #[br] bonus
+            p $ 500 - 10% #[br] bonus
+
+        .inputbox
+            input.sum(type="text", name="", placeholder="Sum", value="$ 1.600")
+
+            .promo
+                input(type="text", name="", placeholder="Enter promo code")
+
+            //- .promo.access
+                input(type="text", name="", placeholder="Promo code activety", readonly)
+            //- .promo.error
+                input(type="text", name="", placeholder="Invalide code", readonly)
+            
+        p.txt18 It is possible to replenish skins with the benefit #[span of 20%] 
+        button Go
+
+.howpopup
+    .howpopup__bg
+    .howpopup__window
+        img.howpopup__window_bg(src="build/img/bg/howpopup01.png", alt="")
+        .howpopup__close
+        p.ttl50 HOW DO YOU WANT #[br] TO YOU
+        .line
+
+        .string
+            button Cash
+            button Scins
+
+.caspopup
+    .caspopup__bg
+    .caspopup__window
+        img.caspopup__window_bg(src='build/img/bg/caspopup01.png' alt='')
+        .caspopup__close
+        p.ttl65 YOU WON
+        .line
+        .skinblock.red
+            img.gun(src='build/img/gun03.svg' alt='')
+            img.item(src='build/img/item02.svg' alt='')
+            p.ttl AWP #[span Snake skin]
+        
+        p.ttl30 Login via steam and take IT
+        p.txt18
+            | To open the cases was even better, we made a unique promo code! Enter Tasty-case in the top-up window and 
+            br
+            span get 20% bonus.
+        button Login via Steam
+
+.spinpopup
+    .spinpopup__bg
+    .spinpopup__window
+        img.spinpopup__window_bg(src='build/img/bg/spinpopup01.png' alt='')
+        .spinpopup__close
+        p.ttl50 YOU WON
+        .line
+        img.img(src='build/img/spins/img.png' alt='')
+        p.txt20 #[span +35% TO TOP‑UP BALANCE]
+        p.txt18
+            | We did it ! Catch the promotional code by 
+            span.green 35%
+            | to replenish the balance: 
+            span.white H63DB88AG6
+
+.contractpopup
+    .contractpopup__bg
+    .contractpopup__window
+        img.contractpopup__window_bg(src='build/img/bg/contractpopup01.png' alt='')
+        .contractpopup__close
+        p.ttl50 HOW IT WORKS
+        .line
+        ul.txt18
+            li 1.1. Add 3 or more items
+            li 2. Click "Create Contract".
+            li 3. Get the item
+
+script(src="build/js/jquery-3.5.1.js") 
+script(src="build/js/main.js")
+script(src="build/js/slick.min.js")

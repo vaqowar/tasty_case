@@ -1,0 +1,128 @@
+mixin header__top_link(link, name, className) 
+    li
+        a(class='header__top_link '+className, href=link)=name
+
+header.header
+    .header__top
+        .header__container
+
+            .header__top_inner
+        
+                .header__top_left
+                    p.tastycase__logo tasty-<span>case</span> 
+                    ul.header__top_list
+                        +header__top_link("#", "Top of users") 
+                        +header__top_link("#", "Balance bonus", "orange") 
+                        +header__top_link("#", "Game") 
+                        +header__top_link("#", "Inspect") 
+                        +header__top_link("#", "Instagram") 
+                        +header__top_link("#", "GIVEAWAY", "giveaway__logo") 
+
+                
+                if youAuthorized
+
+                    .header__top_right
+                        a.header__top_balance #[span +]&nbsp; Balance up  
+
+                        .header__top_account
+                            img.header__top_account_img(src='build/img/account01.jpg' alt='')
+                        
+                            .header__top_account_right
+
+                                .header__top_account_string
+                                    .header__top_account_substring
+                                        p.header__top_account_name PLASTIQUE
+                                    .header__top_account_secondsubstr
+                                        img.header__top_account_rank(src='build/img/icons/rank01.svg' alt='')
+                            
+                                .header__top_account_string
+                                    .header__top_account_substring
+                                        p.header__top_account_balance $ #[span 23]
+                                        p.header__top_account_health 0.00
+                                            img(src='build/img/icons/heart01.svg' alt='')
+                                    .header__top_account_secondsubstr
+                                        img.header__top_account_arrow(src='build/img/icons/arrow01.svg' alt='')
+    
+                            ul.header__top_account_list
+                                li
+                                    img(src='build/img/icons/account01.svg' alt='')
+                                    a(href='#') My account
+                                li
+                                    img(src='build/img/icons/link01.svg' alt='')
+                                    a(href='#') Exchange Link
+                                li
+                                    img(src='build/img/icons/out01.svg' alt='')
+                                    a(href='#') Log out
+  
+                        button.header__top_burger
+                            span.header__top_burger_item
+                
+                else
+                
+                    .header__top_right
+                        a.header__top_login(href="#") Login via Steam
+                        button.header__top_burger
+                            span.header__top_burger_item
+
+
+    .header__middle
+        .header__container
+            .header__middle_inner
+                .header__middle_left
+                    .giveaway__logo_box
+                        p.giveaway__logo GIVEAWAY
+                        img.giveaway__icon(src="build/img/icons/giveaway01.svg", alt="")
+                    button.header__middle_btn.blue 22:13:04
+                    button.header__middle_btn.yellow 76:52:12
+                    .header__middle_sound
+                        img.header__middle_sound_icon(src="build/img/icons/giveaway01.svg", alt="")
+                        p Sound <span>on</span>
+                .header__middle_right
+                    .header__middle_stat
+                        img.header__middle_stat_icon(src="build/img/icons/stat01.svg", alt="")
+                        .header__middle_stat_block
+                            .header__middle_stat_digit 535 124
+                            .header__middle_stat_info Case opened
+    
+    .header__bottom
+        .header__bottom_block.first
+            p.header__bottom_ttl FAMAS DIGGLE <br> 1 ST CASE
+            p.header__bottom_subttl 1 sec over
+            img.header__bottom_icon(src="build/img/gun01.svg", alt="")
+            img.header__bottom_item(src="build/img/item01.svg", alt="")
+        
+        .header__bottom_block.second
+            p.header__bottom_ttl FAMAS DIGGLE <br> 1 ST CASE
+            p.header__bottom_subttl 1 sec over
+            img.header__bottom_icon(src="build/img/gun01.svg", alt="")
+            img.header__bottom_item(src="build/img/item01.svg", alt="")
+        
+        .header__bottom_block.third
+            p.header__bottom_ttl FAMAS DIGGLE <br> 1 ST CASE
+            p.header__bottom_subttl 1 sec over
+            img.header__bottom_icon(src="build/img/gun01.svg", alt="")
+            img.header__bottom_item(src="build/img/item01.svg", alt="")
+        
+        .header__bottom_block.fourth
+            p.header__bottom_ttl FAMAS DIGGLE <br> 1 ST CASE
+            p.header__bottom_subttl 1 sec over
+            img.header__bottom_icon(src="build/img/gun01.svg", alt="")
+            img.header__bottom_item(src="build/img/item01.svg", alt="")
+        
+        .header__bottom_block.fifth
+            p.header__bottom_ttl FAMAS DIGGLE <br> 1 ST CASE
+            p.header__bottom_subttl 1 sec over
+            img.header__bottom_icon(src="build/img/gun01.svg", alt="")
+            img.header__bottom_item(src="build/img/item01.svg", alt="")
+        
+        .header__bottom_block.sixth
+            p.header__bottom_ttl FAMAS DIGGLE <br> 1 ST CASE
+            p.header__bottom_subttl 1 sec over
+            img.header__bottom_icon(src="build/img/gun01.svg", alt="")
+            img.header__bottom_item(src="build/img/item01.svg", alt="")
+        
+        .header__bottom_block.seventh
+            p.header__bottom_ttl FAMAS DIGGLE <br> 1 ST CASE
+            p.header__bottom_subttl 1 sec over
+            img.header__bottom_icon(src="build/img/gun01.svg", alt="")
+            img.header__bottom_item(src="build/img/item01.svg", alt="")

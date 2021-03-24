@@ -1,0 +1,48 @@
+block variables
+
+doctype html    
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        
+        link(rel="stylesheet" href="build/css/main.css")
+        title= pageTitle
+    body
+        include header 
+
+        mixin game__block(link, img, price, name)
+            a.game__block(href=link)
+                img(src="build/img/games/"+img, alt="") 
+                .game__price $ #[span=price]  
+                p.game__name=name
+
+        mixin pack__block(link, name) 
+            a.pack__block(href="link")=name
+
+        mixin rev__block
+            .rev__block
+                img.quotes(src="build/img/icons/quotes01.svg", alt="")
+                p.ttl25 THE GREAT VAULT
+                .stars
+                    img(src="build/img/icons/star01.svg", alt="")
+                    img(src="build/img/icons/star01.svg", alt="")
+                    img(src="build/img/icons/star01.svg", alt="")
+                    img(src="build/img/icons/star01.svg", alt="")
+                    img(src="build/img/icons/star02.svg", alt="")
+                p.txt18 Is essentially a re-thinked and improved version of BFA weekly loot chest. Instead of dropping a single random item,
+                a(href="#") 
+                    p Read More
+                    img(src="build/img/icons/green_arrow01.svg", alt="") 
+
+        mixin cond__block(img, name, text)
+            .cond__block
+                img.icon(src="build/img/icons/" + img, alt="")
+                p.ttl30=name
+                .green__line
+                p.txt18=text
+
+        block content
+
+        include footer

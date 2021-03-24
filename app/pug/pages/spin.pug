@@ -1,0 +1,115 @@
+extends ../includes/html
+
+block variables 
+    - var pageTitle = "Cases"
+    - var youAuthorized = true; 
+
+block content
+
+    mixin spin__main_circle_block(img)
+        .spin__main_circle_block
+            img(src='build/img/spins/' + img alt='')        
+
+    mixin spin__regs_block(img, text) 
+        .spin__regs_block
+            img(src='build/img/spins/'+img alt='')
+            p=text
+
+    main.spin
+        .spin__main
+            .main__container
+
+                .spin__main_cont
+                    img.spin__main_cont_bg(src='build/img/spins/bg01.png' alt='')
+            
+                    img.spin__main_arrows(src='build/img/spins/arrows01.png' alt='')
+                
+                    .spin__main_form
+                        p.ttl48 BONUS SPIN
+                        p.txt18 Spin the wheel to get your bonus
+                        
+                        .spin__main_form_time
+                            .spin__main_form_time_block
+                                p.spin__main_form_time_digit 12
+                                p.spin__main_form_time_txt DAYS
+                            
+                            .spin__main_form_time_block
+                                p.spin__main_form_time_digit :
+                                p.spin__main_form_time_txt
+                            
+                            .spin__main_form_time_block
+                                p.spin__main_form_time_digit 21
+                                p.spin__main_form_time_txt HOURS
+                    
+                            .spin__main_form_time_block
+                                p.spin__main_form_time_digit :
+                                p.spin__main_form_time_txt
+                            
+                            .spin__main_form_time_block
+                                p.spin__main_form_time_digit 24
+                                p.spin__main_form_time_txt MINUTES
+                            
+                            .spin__main_form_time_block
+                                p.spin__main_form_time_digit :
+                                p.spin__main_form_time_txt
+                    
+                            .spin__main_form_time_block
+                                p.spin__main_form_time_digit 19
+                                p.spin__main_form_time_txt SECONDS
+                
+                        p.txt16 YOU CAN ENTER A SECRET CODE OR EXECUTE TASKS
+                        
+                        .spin__main_form_inputbox
+                            input(type='text' name='' id='' placeholder='Enter the secret code')
+                            button GO
+                        
+                        .spin__main_form_bottom
+                            p.txt16
+                                | Topping up the balance for at least 100P with one payment
+                                | or  Open Skill Case 4 times 
+                                span.green 1
+                                span.white / 4
+                
+                    .spin__main_shadow
+                    
+                    .spin__main_smoke
+                        .spin__main_smoke_01
+                        .spin__main_smoke_02
+                
+                    .spin__main_circle
+                
+                        +spin__main_circle_block("spin01.png")
+                        +spin__main_circle_block("spin02.png")
+                        +spin__main_circle_block("spin03.png")
+                        +spin__main_circle_block("spin04.png")
+                        +spin__main_circle_block("spin05.png")
+                        +spin__main_circle_block("spin03.png")
+                        +spin__main_circle_block("spin01.png")
+                        +spin__main_circle_block("spin06.png")
+                        +spin__main_circle_block("spin02.png")
+                        +spin__main_circle_block("spin07.png")
+                        +spin__main_circle_block("spin08.png")
+                        +spin__main_circle_block("spin09.png")
+                        +spin__main_circle_block("spin10.png")
+                        +spin__main_circle_block("spin02.png")
+                
+        .spin__regs
+            .main__container
+                p.txt18
+                    | The new bonus will replace the previous one, if it was not used before. Also bonuses dropped out of
+                    | the wheel are not
+                    | added to the promo codes to replenish the balance.
+                
+                .spin__regs_cont
+                    +spin__regs_block("spin07.png", "2 items for contracts")
+                    +spin__regs_block("spin08.png", "Free case opening")
+                    +spin__regs_block("spin04.png", "+35% to top‑up")
+                    +spin__regs_block("spin05.png", "+50% to top‑up")
+                    +spin__regs_block("spin01.png", "+60% to the balance")
+                    +spin__regs_block("spin03.png", "100 at balance top‑up from 150")
+                    +spin__regs_block("spin07.png", "2 items for contracts")
+                    +spin__regs_block("spin08.png", "Free case opening")
+                    +spin__regs_block("spin04.png", "+35% to top‑up")
+                    +spin__regs_block("spin05.png", "+50% to top‑up")
+                    +spin__regs_block("spin01.png", "+60% to the balance")
+                    +spin__regs_block("spin03.png", "100 at balance top‑up from 150")

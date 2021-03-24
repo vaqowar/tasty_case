@@ -1,0 +1,216 @@
+extends ../includes/html
+
+block variables 
+    - var pageTitle = "Top uses"
+    - var youAuthorized = true; 
+
+block content
+
+    mixin topusers__list_string(num, ava, name, rate, prize01, prize02)
+        li.topusers__list_string
+            p.topusers__list_string_number= num
+            .topusers__list_string_ava
+                img(src='build/img/' + ava alt='')
+            p.topusers__list_string_name= name
+            p.topusers__list_string_rate= rate
+            .topusers__list_string_prize
+                img(src='build/img/'+ prize01 alt='')
+                img(src='build/img/'+ prize02 alt='')
+    
+    mixin topusers__ranges_block(quant_in, quant_out, img, name) 
+        .topusers__ranges_block
+            p.topusers__ranges_quant=quant_in
+                | /
+                | #[span=quant_out]  
+            img(src='build/img/ranges/'+ img alt='') 
+            p.topusers__ranges_name=name
+  
+    main.topusers
+        img.topusers__bg(src='build/img/bg/topusers01.png' alt='') 
+        
+        .main__container
+ 
+            .topusers__header
+                p.ttl48 WEEKLY TOP
+                p.txt18
+                    | Hello! This is the weekly top players. Open cases, increase your rank, move up, and get the coolest
+                    | skins for it! If you're in the top spot by the end of the timer, a skin will appear in your profile and you can add
+                    | it to your Steam account.
+                
+                .topusers__header_block
+                    p.ttl16 TO THE END:
+                    
+                    .topusers__header_block_timer
+                        
+                        .topusers__header_block_timer_block
+                            p.topusers__header_block_timer_digit 12
+                            p.topusers__header_block_timer_txt DAYS
+                        
+                        .topusers__header_block_timer_block
+                            p.topusers__header_block_timer_digit :
+                            p.topusers__header_block_timer_txt
+          
+                        .topusers__header_block_timer_block
+                            p.topusers__header_block_timer_digit 21
+                            p.topusers__header_block_timer_txt HOURS
+          
+                        .topusers__header_block_timer_block
+                            p.topusers__header_block_timer_digit :
+                            p.topusers__header_block_timer_txt
+          
+                        .topusers__header_block_timer_block
+                            p.topusers__header_block_timer_digit 24
+                            p.topusers__header_block_timer_txt MINUTES
+          
+                        .topusers__header_block_timer_block
+                            p.topusers__header_block_timer_digit :
+                            p.topusers__header_block_timer_txt
+          
+                        .topusers__header_block_timer_block
+                            p.topusers__header_block_timer_digit 19
+                            p.topusers__header_block_timer_txt SECONDS
+    
+            .topusers__choices
+                p.ttl35 Choose a week:
+            
+                .topusers__choices_right
+                    img.topusers__choices_calendar(src='build/img/icons/calendar01.svg' alt='')
+                
+                    select.topusers__choices_selector
+                        option(value='12 / 21 - 12 / 28' disabled='') 12 / 21 - 12 / 28
+                        option(value='01 / 01 - 01 / 01') 01 / 01 - 01 / 01
+                        option(value='02 / 02 - 02 / 02') 02 / 02 - 02 / 02
+                        option(value='03 / 03 - 03 / 03') 03 / 03 - 03 / 03
+                        option(value='04 / 04 - 04 / 04') 04 / 04 - 04 / 04
+                        option(value='05 / 05 - 05 / 05') 05 / 05 - 05 / 05
+                        option(value='06 / 06 - 06 / 06') 06 / 06 - 06 / 06
+                        option(value='07 / 07 - 07 / 07') 07 / 07 - 07 / 07
+                        option(value='08 / 08 - 08 / 08') 08 / 08 - 08 / 08
+                        option(value='09 / 09 - 09 / 09') 09 / 09 - 09 / 09
+                        option(value='10 / 10 - 10 / 10') 10 / 10 - 10 / 10
+                        option(value='11 / 11 - 11 / 11') 11 / 11 - 11 / 11
+                        option(value='12 / 12 - 12 / 12') 12 / 12 - 12 / 12
+                        option(value='13 / 13 - 13 / 13') 13 / 13 - 13 / 13
+                        option(value='14 / 14 - 14 / 14') 14 / 14 - 14 / 14
+                        option(value='15 / 15 - 15 / 15') 15 / 15 - 15 / 15
+                        option(value='16 / 16 - 16 / 16') 16 / 16 - 16 / 16
+                        option(value='17 / 17 - 17 / 17') 17 / 17 - 17 / 17
+                        option(value='18 / 18 - 18 / 18') 18 / 18 - 18 / 18
+                        option(value='19 / 19 - 19 / 19') 19 / 19 - 19 / 19
+                        option(value='20 / 20 - 20 / 20') 20 / 20 - 20 / 20
+        
+            .topusers__ttl
+                p.first IN THE TOP #[span 1%] 
+        
+                p.second NUMBER OF PLAYERS #[span 1145657]
+
+            ul.topusers__list
+                
+                li.topusers__list_string
+                    p.topusers__list_string_number #
+                    p.topusers__list_string_ava
+                    p.topusers__list_string_name PLAYER
+                    p.topusers__list_string_rate RATING
+                    p.topusers__list_string_prize PRIZE
+                
+                +topusers__list_string(
+                    "1", 
+                    "bitch01.png", 
+                    "DEEED PYLL.", 
+                    "3220", 
+                    "gun02.svg", "gun02.svg")
+                +topusers__list_string(
+                    "2", 
+                    "bitch01.png", 
+                    "DEEED PYLL.", 
+                    "3081.67", 
+                    "gun02.svg", "gun02.svg")
+                +topusers__list_string(
+                    "3", 
+                    "bitch01.png", 
+                    "DEEED PYLL.", 
+                    "3674.67", 
+                    "gun02.svg", "gun02.svg")
+                +topusers__list_string(
+                    "4", 
+                    "bitch01.png", 
+                    "DEEED PYLL.", 
+                    "1052.33", 
+                    "gun02.svg", "gun02.svg")
+                +topusers__list_string(
+                    "5", 
+                    "bitch01.png", 
+                    "DEEED PYLL.", 
+                    "729", 
+                    "gun02.svg", "gun02.svg")
+                +topusers__list_string(
+                    "6", 
+                    "bitch01.png", 
+                    "DEEED PYLL.", 
+                    "658.67", 
+                    "gun02.svg")
+                +topusers__list_string(
+                    "7", 
+                    "bitch01.png", 
+                    "DEEED PYLL.", 
+                    "658.67", 
+                    "gun02.svg")
+                +topusers__list_string(
+                    "8", 
+                    "bitch01.png", 
+                    "DEEED PYLL.", 
+                    "658.67", 
+                    "gun02.svg")
+                +topusers__list_string(
+                    "9", 
+                    "bitch01.png", 
+                    "DEEED PYLL.", 
+                    "658.67", 
+                    "gun02.svg")
+                +topusers__list_string(
+                    "10", 
+                    "bitch01.png", 
+                    "DEEED PYLL.", 
+                    "658.67", 
+                    "gun02.svg")
+
+            .topusers__regs
+                .topusers__regs_cont
+                    
+                    .topusers__regs_block
+                        p.ttl21 CURRENT RANGE:
+                        .topusers__regs_subblock
+                            .topusers__regs_subblock_img.ava
+                                img(src='build/img/ava01.jpg' alt='')
+                            p.txt18 Your rating is directly related to the amount of points you earn when opening cases.
+                    
+                    .topusers__regs_block
+                        p.ttl21 TEXT PRIZE:
+                        .topusers__regs_subblock
+                            .topusers__regs_subblock_img
+                                img(src='build/img/gun02.svg' alt='')
+                            p.txt18 Your rating is directly related to the amount of points you earn when opening cases.
+    
+            .topusers__ranges
+                p.ttl21 RANGE PROGRESS
+                
+                .topusers__ranges_cont
+
+                    +topusers__ranges_block(1, 50, "silver_1.png", "SILVER 1")
+                    +topusers__ranges_block(51, 250, "silver_2.png", "SILVER 2")
+                    +topusers__ranges_block(251, 500, "silver_3.png", "SILVER 3") 
+                    +topusers__ranges_block(501, 1500, "silver_4.png", "SILVER 4")
+                    +topusers__ranges_block(1501, 2500, "silver_elite.png", "SILVER ELITE")
+                    +topusers__ranges_block(2501, 5000, "silver_elite_m.png", "SILVER ELITE M")
+                    +topusers__ranges_block(5001, 7000, "gold_nova_1.png", "GOLD NOVA 1")
+                    +topusers__ranges_block(7001, 10000, "gold_nova_2.png", "GOLD NOVA 2")
+                    +topusers__ranges_block(10001, 13000, "gold_nova_3.png", "GOLD NOVA 3")
+                    +topusers__ranges_block(13001, 16000, "gold_nova_m.png", "GOLD NOVA M")
+                    +topusers__ranges_block(16001, 20000, "m_guardian_1.png", "M GUARDIAN 1")
+                    +topusers__ranges_block(20001, 23000, "m_guardian_2.png", "M GUARDIAN 2")
+                    +topusers__ranges_block(23001, 26000, "m_guardian_elite.png", "M GUARDIAN ELITE")
+                    +topusers__ranges_block(26001, 29000, "distinguished_m_guardian.png", "DISTINGUISHED M GUARDIAN")
+                    +topusers__ranges_block(29001, 33000, "legendary_eagle.png", "LEGENDARY EAGLE")
+                    +topusers__ranges_block(33001, 36000, "legendary_eagle_m.png", "LEGENDARY EAGLE M")
+                    +topusers__ranges_block(36001, 39000, "supreme_m_first_class.png", "SUPREME M FIRST CLASS")
+                    +topusers__ranges_block(39001, 55000, "world_elite.png", "WORLD ELITE")
